@@ -9,25 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var type_graphql_1 = require("type-graphql");
-var User = /** @class */ (function () {
-    function User() {
-    }
-    __decorate([
-        type_graphql_1.Field(function (type) { return type_graphql_1.Int; }),
-        __metadata("design:type", Number)
-    ], User.prototype, "id", void 0);
-    __decorate([
-        type_graphql_1.Field(),
-        __metadata("design:type", String)
-    ], User.prototype, "name", void 0);
-    __decorate([
-        type_graphql_1.Field(),
-        __metadata("design:type", String)
-    ], User.prototype, "department", void 0);
-    User = __decorate([
-        type_graphql_1.ObjectType()
-    ], User);
-    return User;
-}());
+const type_graphql_1 = require("type-graphql");
+const Credentials_1 = require("./Credentials");
+const Position_1 = require("./Position");
+let User = class User {
+};
+__decorate([
+    type_graphql_1.Field((type) => type_graphql_1.Int),
+    __metadata("design:type", Number)
+], User.prototype, "id", void 0);
+__decorate([
+    type_graphql_1.Field((type) => Credentials_1.default),
+    __metadata("design:type", Credentials_1.default)
+], User.prototype, "credentials", void 0);
+__decorate([
+    type_graphql_1.Field((type) => Position_1.default),
+    __metadata("design:type", Position_1.default)
+], User.prototype, "position", void 0);
+User = __decorate([
+    type_graphql_1.ObjectType()
+], User);
 exports.default = User;
+//# sourceMappingURL=User.js.map

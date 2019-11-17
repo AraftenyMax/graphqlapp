@@ -4,11 +4,7 @@
   "description": "Graphql test app",
   "main": "src/index.ts",
   "scripts": {
-    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
-    "build": "tsc",
-    "prestart": "npm run build",
-    "start": "node --experimental-modules .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "tsc && nodemon ./dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +22,7 @@
     "apollo-server-express": "^2.9.9",
     "express": "^4.17.1",
     "graphql": "^14.5.8",
+    "graphql-yoga": "^1.18.3",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^0.17.5"
   },
